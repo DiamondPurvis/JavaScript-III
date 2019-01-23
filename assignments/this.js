@@ -32,7 +32,20 @@ myObj.city('Georgia');
 // Principle 3
 
 // code example for New Binding
-
+function ShoeDescription(sneaker) {
+    this.description = 'Nice ';
+    this.type = sneaker;
+    this.apply = function() {
+      console.log(this.description + this.type);
+      console.log(this);
+    };
+  }
+  
+  const nikes = new ShoeDescription('reeboks');
+  const reeboks = new ShoeDescription('nikes');
+  
+  nikes.apply();
+  reeboks.apply();
 // Principle 4
 
 // code example for Explicit Binding
