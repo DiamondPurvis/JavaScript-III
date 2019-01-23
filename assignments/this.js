@@ -12,7 +12,11 @@
 // Principle 1
 
 // code example for Window Binding
-
+function howManyToes(toes) {
+    console.log(this);
+    return toes;
+}
+howManyToes('12');
 // Principle 2
 
 // code example for Implicit Binding
