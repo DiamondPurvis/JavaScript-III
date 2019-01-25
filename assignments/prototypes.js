@@ -10,6 +10,7 @@
   
 
   function GameObject (attrs) {
+    this.name = options.name;
     this.createdAt = attrs.createdAt;
     this.dimensions = attrs.dimensions;
   }
