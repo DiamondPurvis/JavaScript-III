@@ -19,6 +19,7 @@
   }
 
   function CharacterStats (attrs1) {
+    GameObject.call(this,attrs1)
     this.healthPoints = attrs1.healthPoints;
     this.name = attrs1.name;
   }
