@@ -23,10 +23,11 @@
     this.healthPoints = attrs1.healthPoints;
     this.name = attrs1.name;
   }
-  CharacterStats.prototype.takeDamage = function () {
-    return `${this.name} took damage`;
-  }
   CharacterStats.prototype = Object.create(GameObject.prototype);
+
+  CharacterStats.prototype.takeDamage = function () {
+    return `${this.name} took damage.`;
+  }
 
 
 
@@ -35,11 +36,11 @@ function Humanoid (attrs2) {
   this.weapons = weapons.attrs2;
   this.language = language.attrs2;
 }
+Humanoid.prototype = Object.create(CharacterStats.prototype);
+
   Humanoid.prototype.greet = function () {
     return `${this.name} offers a greeting in ${this.language}`;
   }
-  Humanoid.prototype = Object.create(CharacterStats.prototype);
-
  
 /*
   * Inheritance chain: GameObject -> CharacterStats -> Humanoid
