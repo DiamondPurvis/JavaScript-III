@@ -15,7 +15,7 @@
     this.dimensions = attrs.dimensions;
   }
   GameObject.prototype.destroy = function () {
-    return `${this.name} was removed from the game`;
+    return `${GameObject} was removed from the game.`;
   }
 
   function CharacterStats (attrs1) {
