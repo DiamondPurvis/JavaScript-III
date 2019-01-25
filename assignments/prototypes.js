@@ -31,9 +31,10 @@
 
 
 function Humanoid (attrs2) {
-  this.team = team.attrs2;
-  this.weapons = weapons.attrs2;
-  this.language = language.attrs2;
+  CharacterStats.call(this,attrs2);
+  this.team = attrs2.team;
+  this.weapons = attrs2.weapons;
+  this.language = attrs2.language;
 }
 Humanoid.prototype = Object.create(CharacterStats.prototype);
 
