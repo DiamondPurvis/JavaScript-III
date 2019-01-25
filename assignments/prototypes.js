@@ -10,16 +10,15 @@
   
 
   function GameObject (attrs) {
-    this.name = options.name;
     this.createdAt = attrs.createdAt;
     this.dimensions = attrs.dimensions;
   }
   GameObject.prototype.destroy = function () {
-    return `${GameObject} was removed from the game.`;
+    return `${this.name} was removed from the game.`;
   }
 
   function CharacterStats (attrs1) {
-    GameObject.call(this,attrs1)
+    GameObject.call(this,attrs1);
     this.healthPoints = attrs1.healthPoints;
     this.name = attrs1.name;
   }
